@@ -1763,10 +1763,12 @@ process.on('SIGINT', () => {
     });
 });
 
-// Экспорт для возможного использования в других модулях
-module.exports = { app, server, db, CONFIG };});
 
-channels.set('news', {
+
+// ЭКСПОРТ ДЛЯ ВОЗМОЖНОГО ИСПОЛЬЗОВАНИЯ В ДРУГИХ МОДУЛ
+
+module.exports = { app, server, db, CONFIG }
+    ;channels.set('news', {
     name: 'Новости',
     admin: 'admin',
     subscribers: new Set(['admin']),
